@@ -1,6 +1,7 @@
 package com.example.flixster;
 
 import android.content.Context;
+import android.content.res.Configuration;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,16 +59,32 @@ public class MovieAdpater  extends RecyclerView.Adapter<MovieAdpater.Viewholder>
         holder.tvTitle.setText(movie.getTitle());
         holder.tvOverview.setText(movie.getOverview());
 
+        //determining the device orientation
+        boolean isPortrait = context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT;
+
         //build url for poster image
-        String imageUrl = config.getImageUrl(config.getPosterSize(), movie.getPosterPath());
+        String imageUrl = null;
+
+        // if in portarit mode, load poster image
+
+        if(isPortrait){
+            imageUrl = config.getImageUrl(config.getPosterSize(), movie.getPosterPath());
+        } else{
+            //landscape
+            imageUrl = config.getImageUrl(config.getBackdropSize(), movie.getBackdropPath());
+        }
+
+        //get the correct placeholder and image view depending on the orientation
+        int placeholder = isPortrait ? R.drawable.flicks_movie_placeholder : R.drawable.flicks_backdrop_placeholder;
+        ImageView imageView = isPortrait ? holder.ivPosterImage : holder.ivBackdropImage;
 
         //load image using glide library
         Glide.with(context)
                 .load(imageUrl)
                 .bitmapTransform(new RoundedCornersTransformation(context, 25, 0))
                 .placeholder(R.drawable.flicks_movie_placeholder)
-                .error(R.drawable.flicks_movie_placeholder)
-                .into(holder.ivPosterImage);
+                .error(placeholder)
+                .into(imageView);
     }
     //returns size of total data set
     @Override
@@ -81,6 +98,7 @@ public class MovieAdpater  extends RecyclerView.Adapter<MovieAdpater.Viewholder>
 
         //track view objects
         ImageView ivPosterImage;
+        ImageView ivBackdropImage;
         TextView tvTitle;
         TextView tvOverview;
 
@@ -90,6 +108,7 @@ public class MovieAdpater  extends RecyclerView.Adapter<MovieAdpater.Viewholder>
             //lookup view objects by id
             ivPosterImage = (ImageView) itemView.findViewById(R.id.ivPosterImage);
             tvOverview = (TextView)  itemView.findViewById(R.id.tvOverview);
+            ivBackdropImage = (ImageView) itemView.findViewById(R.id.ivBackdropimage);
             tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
         }
     }
