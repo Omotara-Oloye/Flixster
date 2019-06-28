@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Movie> movies;
 
     //track the adapter
-    MovieAdpater adapter;
+    MovieAdapter adapter;
     //Recycler View
     RecyclerView rvMovies;
 
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         movies = new ArrayList<>();
 
         //intitalize the adapter -- movies array cannot be recreated after this point
-        adapter = new MovieAdpater(movies);
+        adapter = new MovieAdapter(movies);
 
         //resolve the recycler view and connect a layout manager
         rvMovies = (RecyclerView) findViewById(R.id.rvMovies);

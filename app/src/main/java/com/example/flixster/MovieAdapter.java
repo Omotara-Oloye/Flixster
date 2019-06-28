@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
-public class MovieAdpater  extends RecyclerView.Adapter<MovieAdpater.Viewholder>{
+public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.Viewholder>{
 
     //instance variables
     ArrayList<Movie> movies;
@@ -29,7 +29,7 @@ public class MovieAdpater  extends RecyclerView.Adapter<MovieAdpater.Viewholder>
     Context context;
 
     //initialize this list
-    public MovieAdpater(ArrayList<Movie> movies) {
+    public MovieAdapter(ArrayList<Movie> movies) {
         this.movies = movies;
     }
 
@@ -106,7 +106,7 @@ public class MovieAdpater  extends RecyclerView.Adapter<MovieAdpater.Viewholder>
         public Viewholder(@NonNull View itemView) {
             super(itemView);
             //lookup view objects by id
-            ivPosterImage = (ImageView) itemView.findViewById(R.id.ivPosterImage);
+            ivPosterImage = (ImageView) itemView.findViewById(R.id.ivPosterImage); //now they don't have to cast b/c they just infer from the id search
             tvOverview = (TextView)  itemView.findViewById(R.id.tvOverview);
             ivBackdropImage = (ImageView) itemView.findViewById(R.id.ivBackdropimage);
             tvTitle = (TextView) itemView.findViewById(R.id.tvTitle);
