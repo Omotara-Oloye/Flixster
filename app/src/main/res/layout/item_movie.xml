@@ -13,7 +13,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginRight="5dp"
-        app:srcCompat="@android:color/black" />
+        app:srcCompat="@android:color/black"
+        />
 
     <TextView
         android:id="@+id/tvTitle"

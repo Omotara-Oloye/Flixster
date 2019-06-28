@@ -65,8 +65,8 @@ public class MovieAdpater  extends RecyclerView.Adapter<MovieAdpater.Viewholder>
         Glide.with(context)
                 .load(imageUrl)
                 .bitmapTransform(new RoundedCornersTransformation(context, 25, 0))
-                .placeholder(R.drawable.flicks_backdrop_placeholder)
-                .error(R.drawable.flicks_backdrop_placeholder)
+                .placeholder(R.drawable.flicks_movie_placeholder)
+                .error(R.drawable.flicks_movie_placeholder)
                 .into(holder.ivPosterImage);
     }
     //returns size of total data set
