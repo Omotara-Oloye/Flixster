@@ -26,7 +26,7 @@ The following **stretch** features are implemented:
 * [ ] Improve the user interface through styling and coloring 
 * [ ] Apply the popular ButterKnife annotation library to reduce view boilerplate 
 * [ ] Allow video posts to be played in full-screen using the YouTubePlayerView 
-* [ } From the movie details page, show an image preview that allows the user to initiate playing a YouTube video
+* [ ] From the movie details page, show an image preview that allows the user to initiate playing a YouTube video
 * [ ] Check the /movie/{movie_id}/videos endpoint API docs
 * [ ] Endpoint will provide a video "key" such as "key": "SUXWAEX2jlg" which can be used to construct a YouTube video URL such as  https://www.youtube.com/watch?v=SUXWAEX2jlg
 
