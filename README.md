@@ -5,7 +5,7 @@ Flixter is an android app that read-only movie listing app using the Movie Datab
 
 Submitted by: Omotara Oloye
 
-Time spent: 10 hours spent in total
+Time spent: 15 hours spent in total
 
 ## User Stories
 
@@ -17,12 +17,12 @@ The following **stretch** features are implemented:
 
 * [x] Display a nice default placeholder graphic (see links above) for each image during loading 
 * [x] Add rounded corners for the images using the Glide transformations 
-* [ ] Views should be responsive for both landscape/portrait mode 
-* [ ] In portrait mode, the poster image, title, and movie overview is shown
+* [x] Views should be responsive for both landscape/portrait mode 
+* [x] In portrait mode, the poster image, title, and movie overview is shown
 
-* [ ] In landscape mode, the rotated layout should use the backdrop image instead and show the title and movie overview to the right of it
+* [x] In landscape mode, the rotated layout should use the backdrop image instead and show the title and movie overview to the right of it
 
-* [ ] When a movie is selected, expose details of a movie (ratings using RatingBar, popularity, and synopsis) in a separate activity
+* [x] When a movie is selected, expose details of a movie (ratings using RatingBar, popularity, and synopsis) in a separate activity
 * [ ] Improve the user interface through styling and coloring 
 * [ ] Apply the popular ButterKnife annotation library to reduce view boilerplate 
 * [ ] Allow video posts to be played in full-screen using the YouTubePlayerView 
