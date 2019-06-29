@@ -2,7 +2,9 @@ package com.example.flixster.models;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.parceler.Parcel;
 
+@Parcel // indicates the class is Parcelable
 public class Movie {
 
     //API variables
@@ -10,13 +12,18 @@ public class Movie {
     private String overview;
     private String posterPath; //only the path
     private String backdropPath;
+    private Double voteAverage;
+
+    public Movie(){}
+
 
     //initialize from JSON data
-    public Movie(JSONObject object) throws JSONException {
-        title = object.getString("title");
-        overview = object.getString("overview");
-        posterPath = object.getString("poster_path");
-        backdropPath = object.getString("backdrop_path");
+    public Movie(JSONObject movie) throws JSONException {
+        title = movie.getString("title");
+        overview = movie.getString("overview");
+        posterPath = movie.getString("poster_path");
+        backdropPath = movie.getString("backdrop_path");
+        voteAverage = movie.getDouble("vote_average");
     }
 
 
@@ -34,5 +41,9 @@ public class Movie {
 
     public String getBackdropPath() {
         return backdropPath;
+    }
+
+    public Double getVoteAverage() {
+        return voteAverage;
     }
 }
