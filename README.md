@@ -23,7 +23,7 @@ The following **stretch** features are implemented:
 * [x] In landscape mode, the rotated layout should use the backdrop image instead and show the title and movie overview to the right of it
 
 * [x] When a movie is selected, expose details of a movie (ratings using RatingBar, popularity, and synopsis) in a separate activity
-* [ ] Improve the user interface through styling and coloring 
+* [x] Improve the user interface through styling and coloring 
 * [ ] Apply the popular ButterKnife annotation library to reduce view boilerplate 
 * [ ] Allow video posts to be played in full-screen using the YouTubePlayerView 
 * [ ] From the movie details page, show an image preview that allows the user to initiate playing a YouTube video
@@ -32,13 +32,13 @@ The following **stretch** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you can get done to improve the app functionality!
+* [x] Add a picture to the rating page.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Flixster' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
