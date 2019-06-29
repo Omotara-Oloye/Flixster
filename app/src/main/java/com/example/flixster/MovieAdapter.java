@@ -94,7 +94,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.Viewholder>{
     public int getItemCount() {
         return movies.size();
     }
-// create the viewholder as a static inner class
+    // create the viewholder as a static inner class
 
     public class Viewholder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
